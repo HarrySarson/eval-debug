@@ -21,8 +21,10 @@ debug('%e', expensiveFunction);
 
 ## warning
 
-Conditionally running code dependant on whether or not debugging is enabled is an anti-pattern.
-This could lead to errors in production code that disapear when you try to debug them causing 
-everyone involved a lot of grief.
+Conditionally running code dependant on whether or not debugging is enabled 
+can lead to errors in production code that disapear when you try to debug 
+them causing everyone involved a lot of grief.
+
+Make sure any functions used for creating logging output have no side effects.
 
 See https://github.com/visionmedia/debug/pull/497.
